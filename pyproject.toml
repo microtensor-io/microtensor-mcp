@@ -26,7 +26,7 @@ microtensor-mcp = "microtensor_mcp.server:main"
 
 [project.urls]
 Homepage = "https://www.microtensor.cloud"
-Documentation = "https://www.microtensor.cloud/docs/api/integrations/mcp"
+Documentation = "https://www.microtensor.cloud/docs/integrations/agents/mcp"
 Repository = "https://github.com/microtensor-io/microtensor-mcp"
 
 [tool.setuptools.packages.find]

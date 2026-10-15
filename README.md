@@ -49,4 +49,4 @@ Both connect to MCP servers over HTTP. Run `microtensor-mcp --http --port 8765` 
     pip install -e ".[dev]"
     ruff check . && mypy microtensor_mcp && pytest -q
 
-Docs: https://www.microtensor.cloud/docs/api/integrations/mcp
+Docs: https://www.microtensor.cloud/docs/integrations/agents/mcp
