@@ -24,6 +24,6 @@ jobs:
           cache: pip
       - run: pip install ".[dev]"
       - run: ruff check .
-      - run: mypy microtensor_mcp
       - run: python -c "import microtensor_mcp.server"
+      - run: mypy microtensor_mcp
       - run: pytest -q

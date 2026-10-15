@@ -3,11 +3,11 @@ from __future__ import annotations
 import argparse
 from typing import Any
 
-from mcp.server.fastmcp import FastMCP
+from mcp.server import MCPServer
 
 from microtensor_mcp.client import AUTO, Client, GatewayError, messages_for, summary_of
 
-mcp = FastMCP(
+mcp = MCPServer(
     "microtensor",
     instructions=(
         "Tools for the Microtensor API. ask_specialist answers one task with a certified "
@@ -88,9 +88,7 @@ def main() -> None:
     parser.add_argument("--port", type=int, default=8765)
     args = parser.parse_args()
     if args.http:
-        mcp.settings.host = args.host
-        mcp.settings.port = args.port
-        mcp.run(transport="streamable-http")
+        mcp.run(transport="streamable-http", host=args.host, port=args.port)
     else:
         mcp.run(transport="stdio")
 
